@@ -1,23 +1,39 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import quienesSomos from '../components/quienes-somos.vue'
+import misionVision from '../components/mision-vision.vue';
+import valoresEstrategias from '../components/valores-estrategicos.vue';
+import equipo from '../components/equipo.vue';
+import tecnologias from '../components/tecnologias.vue';
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/quienes-somos',
+    name: 'quienes-somos',
+    component: quienesSomos
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/mision-vision',
+    name: 'mision-vision',
+    component: misionVision
+  },
+  {
+    path: '/valores-estrategias',
+    name: 'valores-estrategias',
+    component: valoresEstrategias
+  },
+  {
+    path: '/equipo',
+    name: 'equipo',
+    component: equipo
+  },
+  {
+    path: '/tecnologias',
+    name: 'tecnologias',
+    component: tecnologias
+  },
 ]
 
 const router = new VueRouter({
